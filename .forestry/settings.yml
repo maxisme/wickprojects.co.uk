@@ -7,7 +7,7 @@ sections:
 - type: directory
   path: content/work
   label: Work
-  create: all
+  create: documents
   match: "**/*"
 - type: directory
   path: content/contact
