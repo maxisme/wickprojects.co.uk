@@ -1,0 +1,10 @@
+---
+label: work
+hide_body: true
+fields:
+- name: images
+  type: image_gallery
+  config: {}
+  label: Images
+pages:
+- content/work/1/1.md
