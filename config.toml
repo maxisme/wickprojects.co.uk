@@ -1,0 +1,13 @@
+baseURL = "https://wickprojects.co.uk/"
+languageCode = "en-gb"
+title = "Wick Projects"
+assetDir = "static"
+[outputs]
+home = ["HTML"]
+[sitemap]
+changefreq = "monthly"
+filename = "sitemap.xml"
+priority = 0.5
+[taxonomies]
+  still-lifes = "still-lifes"
+  landscapes = "landscapes"
