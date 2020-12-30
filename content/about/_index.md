@@ -10,6 +10,6 @@ text: "Wick projects Ltd is a local design and build company which was founded b
   picked team to successfully complete your project big or small to the highest standard.
   Wick projects can tailor it’s services to suit your needs. \n\nAll our projects
   are available to view. We are happy for you to get in touch with our clients directly
-  on request."
+  on request. "
 
 ---
