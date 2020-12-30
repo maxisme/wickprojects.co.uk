@@ -7,6 +7,7 @@ fields:
   config: {}
   label: Images
 pages:
+- content/work/1.md
 - content/work/2.md
 - content/work/3.md
 - content/work/4.md
