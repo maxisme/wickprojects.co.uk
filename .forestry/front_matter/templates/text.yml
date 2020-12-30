@@ -12,4 +12,5 @@ fields:
       format: markdown
   label: Text
 pages:
+- content/about/_index.md
 - content/contact/_index.md
