@@ -5,17 +5,9 @@
 
 <p>&nbsp;</p>
 <div class="work-images">
-    <?php
-    $images = getDirContents("images/");
-
-
-    foreach($images as $image)
-    {
-        $image = str_replace("/NAS/wickprojects.co.uk/public_html/","",$image);
-        echo '<img class="lazy materialboxed" width="100%" data-src="'.$image.'"/>';
-    }
-
-    ?>
+    {{ range where .Site.RegularPages "Section" "work" }}
+        <img class="lazy materialboxed" width="100%" data-src="{{ .Params.image }}"/>
+    {{ end }}
 </div>
 <script>
     $(function() {
