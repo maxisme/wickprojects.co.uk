@@ -3,10 +3,11 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.6/jquery.lazy.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.6/jquery.lazy.plugins.min.js"></script>
 
-<p>&nbsp;</p>
 <div class="work-images">
     {{ range where .Site.RegularPages "Section" "work" }}
-        <img class="lazy materialboxed" width="100%" data-src="{{ .Params.image }}"/>
+        {{ range .Params.images }}
+            <img class="lazy materialboxed" width="100%" data-src="{{ . }}"/>
+        {{ end }}
     {{ end }}
 </div>
 <script>
