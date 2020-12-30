@@ -1,3 +1,5 @@
 {{ partial "header.html" . }}
-{{ .Params.about }}
+<p>
+{{ .Params.text | markdownify }}
+</p>
 {{ partial "footer.html" }}
