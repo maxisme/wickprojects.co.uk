@@ -1,0 +1,25 @@
+{{ partial "header.html" . }}
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.6/jquery.lazy.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.6/jquery.lazy.plugins.min.js"></script>
+
+<p>&nbsp;</p>
+<div class="work-images">
+    <?php
+    $images = getDirContents("images/");
+
+
+    foreach($images as $image)
+    {
+        $image = str_replace("/NAS/wickprojects.co.uk/public_html/","",$image);
+        echo '<img class="lazy materialboxed" width="100%" data-src="'.$image.'"/>';
+    }
+
+    ?>
+</div>
+<script>
+    $(function() {
+        $('.lazy').Lazy();
+    });
+</script>
+{{ partial "footer.html" }}
