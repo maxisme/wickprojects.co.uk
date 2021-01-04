@@ -6,7 +6,7 @@ services:
       mode: global
       labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.wickprojectscouk.rule=Host(`wickprojects.co.uk`)"
+        - "traefik.http.routers.wickprojectscouk.rule=Host(`wickprojects.co.uk`, `wickprojects.uk`)"
         - "traefik.http.services.wickprojectscouk.loadbalancer.server.port=8080"
         - "traefik.http.routers.wickprojectscouk.middlewares=404"
     networks:
