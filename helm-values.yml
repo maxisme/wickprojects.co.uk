@@ -1,5 +1,5 @@
 ingress:
-  match: "Host(`wickprojects.co.uk`)"
+  match: "Host(`wickprojects.co.uk`, `wickprojects.uk`)"
 
 image:
   repository: "maxisme/wickprojects.co.uk"
