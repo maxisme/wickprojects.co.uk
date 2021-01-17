@@ -1,0 +1,6 @@
+ingress:
+  match: "Host(`wickprojects.co.uk`)"
+
+image:
+  repository: "maxisme/wickprojects.co.uk"
+        
