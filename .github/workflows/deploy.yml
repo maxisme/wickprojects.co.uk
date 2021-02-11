@@ -32,11 +32,17 @@ jobs:
           fetch-depth: '0'
       - name: Upgrade helm
         run: |
-          mkdir ~/.kube
+          # pull infra charts
           helm repo add maxisme https://${{ secrets.GH_PA_TOKEN }}@raw.githubusercontent.com/maxisme/infra/master/k8s/charts/
           helm repo update
+
+          # create kube config
+          mkdir ~/.kube
           echo "${{ secrets.B64_KUBE_CONFIG }}" | base64 --decode > ~/.kube/config
-          sha="${{ github.sha }}"
+
+          # deploy helm
           repo="${{ github.repository }}"
-          helm upgrade "${repo//./}" maxisme/web -f helm-values.yml --set="image.tag=sha-${sha:0:7}" --atomic --timeout 120s
+          helm upgrade "${repo//./}" maxisme/web -f helm-values.yml --set="image.tag=sha-${GITHUB_SHA::7}" --atomic --timeout 120s
+
+          # clean up
           rm ~/.kube/config
